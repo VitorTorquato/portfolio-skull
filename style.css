@@ -18,6 +18,8 @@ body{
     font-family: var(--f-standard);
 }
 
+
+
 img{
     width: 100%;
 }
@@ -34,6 +36,12 @@ button{
     color: white;
     margin-top: 1.6rem;
     transition: .5s;
+    @media(max-width: 426px){
+        width: 12rem;
+        font-size: 1.2rem;
+        padding: 1.2rem;
+    }
+
 
 }
 
@@ -54,8 +62,7 @@ header{
     left: 0;
     z-index: 99;
 
-
-
+    
 }
 header .container{
     display: flex;
@@ -69,6 +76,10 @@ header .container{
 nav{
     display: flex;
     gap:1.2rem;
+    @media(max-width: 490px){
+        display: none;
+}
+
 }
 nav a{
     text-decoration: none;
@@ -93,7 +104,21 @@ nav a{
 
 }
 
+.bunner:after{
+    content: "" ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #12002f;
+    opacity: 0.6;
+    z-index: 0;
+}
+
 .bunner .container{
+    position: relative;
+    z-index: 1;
     max-width: 77.9rem;
     margin: 0 auto;
     display: flex;
@@ -101,50 +126,105 @@ nav a{
     gap: 2.4rem;
     padding: 0 2.4rem;
 
+  
+    
 }
 .bunner .container h1{
     font-size: 7.2rem;
     color: white;
+    @media(max-width: 696px){
+        font-size: 6rem;
+        
+        @media(max-width:580px){
+                font-size: 4rem;
+                @media(max-width: 426px){
+                    font-size: 3rem;
+                }
+            
+    }
 }
 
+}
 .bunner .container h2{
     font-size: 3.2rem;
     color: white;
+    @media(max-width: 426px){
+        font-size: 2rem;
+    }
+
 }
 
-/*projects section*/
+/*skills section*/
 
-#projects{
+#services{
     background-color: #EEE;
 }
 
-#projects .container{
-    padding-top: 6.4rem;
-    padding-bottom: 6.4rem;
+#services .container,
+#projects .container,
+#contact .container{
+  
+    padding-bottom: 3.2rem;
     max-width: 77.9rem;
     margin: 0 auto;
 }
 
-#projects h2{
+#services h2,
+#projects h2,
+#contact h2{
     text-align: center;
     font-size: 4.6rem;
     color: #313131;
     text-transform: uppercase;
     padding: 1.6rem 1.2rem 1.6rem 1.2rem;
+    margin-bottom: 3.2rem;
+
+    @media(max-width: 426px){
+        font-size: 3rem;
+    }
 
 }
 
-.projects-grid{
+.services-grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1.6rem;
     padding: 0 1.2rem;
+
+    @media(max-width: 660px){
+        grid-template-columns: repeat(2,1fr);
+        @media(max-width: 424px){
+            display: flex;
+            flex-direction: column;;
+            width: 32.0rem;
+            margin: 0 auto;
+
+        }
+    }
    
+}
+
+.service{
+    border-radius: 4px;
+    overflow: hidden;
+
+
+}
+
+.details{
+    padding:.8rem;
+    background-color: #FFF;
+
+}
+
+.details p{
+    margin-top: .6rem;
 }
 
 .img-box{
     display: block;
     width: 100%;    
+    border-bottom: 5px solid #FF9FDB;
 }
 
 .img-box img{
@@ -154,6 +234,156 @@ nav a{
     object-fit: cover;
     overflow: hidden;
 }
+
+
+/*Projects sections*/
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.6rem;
+    padding: 0 1.2rem;
+    @media(max-width: 660px){
+        grid-template-columns: repeat(2,1fr);
+        @media(max-width: 424px){
+            display: flex;
+            flex-direction: column;;
+            width: 32.0rem;
+            margin: 0 auto;
+
+        }
+    }
+}
+.projects{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    
+
+    background-image:url(https://source.unsplash.com/800x600/?pool);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 1.2rem;
+    padding: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(64,39,68,0.6);
+    opacity: 0;
+    transition: .6s ease-in-out;
+}
+
+.content:hover{
+    opacity: 1;
+
+}
+
+.content h3{
+    color: white;
+    font-size: 2.4rem;
+
+}
+
+
+.content p{
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+
+/*Contact section*/
+
+#contact{
+    background-color: #9B75D7;
+
+}
+
+
+#contact h2{
+    color: white;
+    font-size: 4rem;
+    @media(max-width: 426px){
+        font-size: 2rem;
+    }
+}
+
+form{
+    display: block;
+    margin: 0 auto;
+    max-width: 40rem;
+    @media(max-width: 426px){
+        width: 100%;
+    }
+}
+
+
+.contact-grid{
+    display: grid;
+    grid-gap: 1.6rem;
+    grid-template-columns: repeat(2,1fr);
+    @media(max-width: 426px){
+        grid-template-columns: 1fr;
+        padding: 0 1.2rem;
+    }
+
+}
+
+.form-element , .form-area{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 1.6rem;
+    
+    display: block;
+    width: 100%;
+    background-color: #FFF;
+    font-size: 2rem;
+    color: #313131;   
+    border-radius: 1rem;
+    box-shadow: .3rem .2rem .8rem rgba(0, 0, 0, 0.452);
+
+}
+
+.form-element::placeholder,
+.form-area::placeholder{
+    color: #AAA;
+}
+
+
+.form-area{
+    grid-column: 1/-1 ;
+}
+
+.right-align{
+    text-align: right;
+    @media(max-width: 426px){
+        padding-right: 1.2rem;
+    }
+}
+
+.right-align button{
+    width: 10rem;
+    padding: .6rem .8rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    
+
+}
+
+
 
 
 
