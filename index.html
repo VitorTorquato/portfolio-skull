@@ -6,10 +6,12 @@
     <title>Portifolio prtotype</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="src/main.js" defer></script>
 </head>
 <body>
     <div id="app">
-        <header>
+        <header >
             <div class="container">
                 <div class="logo">
                     <h1>Let's code</h1>
@@ -21,15 +23,19 @@
                     <a href="#projects">Projects</a>
                     <a href="#contact">Contact</a>
                 </nav>
+                <button class="hamburguer ">
+                    <div class="bar"></div>
+                </button>
+            </div>    
             </header>       
-            </div>
+            
 
             <main>
                 <section id="aboutMe" class="bunner">
                     <div class="container">
                         <h1>Web site you're not afraid to share</h1>
                         <h2>Web site for your solutions</h2>
-                        <button>find out more</button>
+                        <button class="button">find out more</button>
                         
                     </div>
                 </section>
@@ -126,7 +132,9 @@
                                 <input type="email" placeholder="e-mail" id="email" class="form-element">
                                 <textarea name="message" placeholder="Send me a message" id="message" class="form-area"></textarea>
                             </div>
-                            <div class="right-align"><button type="submit" class="btnSumit">Submit</button></div>
+                            <div class="right-align"><button 
+                                class="button"
+                                type="submit" class="btnSumit">Submit</button></div>
                         
                         </form>
                     </div>
@@ -134,5 +142,7 @@
             </main>
        
     </div>
+    <script src="src/main.js"></script>
+
 </body>
 </html>

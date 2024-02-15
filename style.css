@@ -24,7 +24,7 @@ img{
     width: 100%;
 }
 
-button{
+.button{
     width: 16rem;
     border: none;
     padding: 1.6rem;
@@ -45,7 +45,7 @@ button{
 
 }
 
-button:hover{
+.button:hover{
     background-color: #e694c6;;
 }
 
@@ -54,22 +54,34 @@ button:hover{
 }
 /*header and nav*/
 header{
+   
     width: 100%;
-    padding: 2.4rem 3.4rem;
-
+    padding: 1.2rem 6.4rem;
+    align-items: center;
+    
     position: fixed;
     top: 0;
     left: 0;
     z-index: 99;
-
+    
     
 }
+
+header.is-scrolling{
+    background-color: #12002f;
+}
+
+
 header .container{
+    max-width: 77.9rem;
+    padding: 01.2rem;
     display: flex;
     align-items: center;
+    align-content: center;
     justify-content: space-between;
     gap: .8rem;
     margin: 0 auto;
+   
 
 }
 
@@ -87,6 +99,44 @@ nav a{
     
 }
 
+.hamburguer{
+    position: relative;
+    display: block;
+    width: 3.5rem;
+    cursor: pointer;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+
+    @media(min-width: 490px){
+        display: none;
+    }
+}
+
+.hamburguer .bar, .hamburguer::after, .hamburguer::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #FFF;
+    margin: 6px 8px;
+    transition: 0.4s;
+}
+
+.hamburguer.is-active::before{
+    transform: rotate(-45deg) translate(-8px,7px);
+
+}
+.hamburguer.is-active::after{
+    transform: rotate(45deg) translate(-8px,-8px);
+
+}
+
+.hamburguer.is-active .bar{
+    opacity: 0;
+}
 /*bunner*/
 
 .bunner{
@@ -124,7 +174,7 @@ nav a{
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
-    padding: 0 2.4rem;
+   
 
   
     
