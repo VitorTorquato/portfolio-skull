@@ -137,6 +137,52 @@ nav a{
 .hamburguer.is-active .bar{
     opacity: 0;
 }
+
+.mobile-nav{
+    display: none;
+}
+
+.mobile-nav{
+    position: fixed;
+
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    z-index: 98; 
+    background-color: #12002f;
+    padding: 12.0rem;
+
+    transition: 0.4s;
+
+    
+}
+
+.mobile-nav.is-active{
+    left: 0;
+    @media (max-width:490){ 
+        display: none;
+    }
+    
+}
+
+.mobile-nav a{
+    display: block;
+    width: 10.8rem;
+    max-width: 28rem;
+    margin: 0 auto 1.6rem;
+    padding: 1.2rem ;
+    background-color: #1f103f;
+    
+    color: #FFF;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+.mobile-nav a:hover{
+    background-color: #24104f;
+}
 /*bunner*/
 
 .bunner{
